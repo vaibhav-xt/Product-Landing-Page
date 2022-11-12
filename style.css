@@ -1,285 +1,429 @@
-*::after, *::before, *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    scroll-behavior: smooth;
 }
 
 body{
-  background-color: black;
-  color: white;
+    background-color: black;
 }
 
-nav{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 4rem 1rem 4rem;
-  text-transform: uppercase;
+/*------------------- Header section----------------- */
+
+header{
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 4rem 2rem 4rem;
 }
 
-.logo{
-  height: 50px;
+.header-logo{
+    width: 6rem;
 }
 
-ul{
-  display: flex;
-  gap: 3rem;
-  list-style: none;
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 1.5rem;
 }
 
-.man{
-  height: 56.3rem;
+.navbar a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
 }
 
-.part-1{
-  display: flex;
-  flex-basis: auto;
+.navbar a:active{
+    color: white;
 }
 
-.section-1{
-  display: flex;
-  flex-wrap: wrap;
+.navbar a:hover{
+    color: red;
+}
+/*------------------- Header Completed --------------------*/
+
+
+/*--------------------- Hero section --------------------- */
+.hero{
+    min-height: calc(100vh - 5rem);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
+    overflow: hidden;
 }
 
-.section-2{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
+.hero-img{
+    display: block;
+    width: 50%;
+    object-fit: cover;
 }
 
-h3{
-  font-size: 3rem;
-  color: red;
+.hero-info{
+    margin: auto 0 auto 0;
+    width:50%;
+    display: flex;
+    flex-direction: column;
 }
 
-h1{
-  font-size: 7rem;
-  padding: 0px 0 10px 0;
+.hero-info-title{
+    font-size: 3vw;
+    color: red;
 }
 
-.subheading{
-  /* max-width: 900px;
-  min-width: 400px; */
-  padding: 0px 0 2rem 0;
-  font-size: 1.2rem;
-  font-size: clamp();
+.hero-info-profession{
+    font-size: 6vw;
 }
 
-.upperlink{
-  display: block;
-  background-color: red;
-  padding: 15px;
-  width: 10rem;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  font-size: 1.7rem;
+.hero-info-para{
+    margin-top: 1em;
+    max-width: 800px;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    line-height: 1.5em;
 }
 
-.upperlink:visited{
-  color: white;
-  text-decoration: none;
+.anchor-me{
+    margin-top: 1.5rem;
+    background-color: red;
+    width: 130px;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
-.part-2{
-  background: linear-gradient(90deg, #111111 50%,  #1e1e1e49 50%);
-  padding: 4rem;
-  height: 100vh;
+.anchor-me:active{
+    color: white;
+}
+/*-------------------- Hero Section Completed --------------------- */
+
+
+/*--------- overview -------- */
+.overview{
+    background: linear-gradient(90deg,rgba(37, 37, 37, 0.709) 50%, rgba(0, 0, 0, 0.76) 50%);
+    min-height: 100vh;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-.boxes{
-  display: grid;
-  grid-template-columns: repeat(3, 400px);
-  grid-gap: 1rem;
-  justify-content: center;
+.overview-main{
+    max-width: 1000px;
+    width: 80%;
+    min-height: 80vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.box-1, .box-2, .box-3{
-  background-color: green;
-  height: 270px;
-  padding: 2rem;
-  box-shadow: 3px 10px 30px rgba(0, 0, 0, 0.3);
+.overview-block{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
 }
 
-.box-1, .box-3{
-  background:rgb(44, 44, 44);
+.card{
+    padding: 2rem;
+    background-color: rgb(39, 39, 39);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
 }
 
-.box-2{
-  background-color: red;
+.card-2{
+    background-color: red;
 }
 
-.boxes h4{
-  font-size: 1.5rem;
+.card-2 .know-more{
+    color: white;
 }
 
-.boxes p, .boxes h4, .box-link{
-  margin-top: 1.1rem;
+.card img{
+    width: 35%;
 }
 
-.box-link{
-  text-decoration: none;
-  display: flex;
-  align-content: center;
-  color: white;
-  font-size: 1.1rem;
-  gap: 0.5rem;
+.know-more{
+    color: red;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
-.boxes p{
-  font-size: 0.95rem;
-  font-weight:100;
-  letter-spacing: 1px;
+.know-more:active{
+    color: white;
 }
 
-.experience{
-  display: grid;
-  margin-top: 20vh;
-  grid-template-columns: repeat(3, 400px);
-  grid-gap: 1rem;
-  justify-content: center;
-  align-content: center;
+.card h4{
+    font-size: 2rem;
 }
 
-.experience div{
-  background-color: rgb(44, 44, 44);
-  padding: 2rem;
-  width: 350px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 3px 10px 30px rgba(0, 0, 0, 0.3);
+.overview-block-2{
+    margin-top: 4rem;
 }
 
-.years{
-  grid-row-start: 1;
-  grid-row-end: 3;
-  background-color: transparent !important;
-  box-shadow: none !important;
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(39, 39, 39);
+    padding: 2em;
 }
 
-.years h4{
-  font-size: 1.5rem;
+.box h1{
+    color: red;
 }
 
-.years h1{
-  color: red;
+.box-1{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background: transparent;
 }
 
-.experience h2{
-  font-size: 3rem;
-  color: red;
+.box-1 h1{
+    font-size: 6rem;
 }
 
-.projects_section{
-  height: 100vh;
-  width: 100rem;
-  /* background-color: green; */
-  padding: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
+.box{
+    font-size: 1rem;
+}
+/*-------------- overview completed  ------------*/
+
+.featured-projects{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2rem;
 }
 
-.bar{
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-  padding: 0 21.9rem 2rem 21.9rem;
-  margin-top: 3rem;
+
+.featured-projects-container{
+    max-width: 1000px;
+    width: 80%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-button{
-  width: 8rem;
-  color: white;
-  background-color: red;
-  border: none;
-  cursor: pointer;
+.project-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 10vh;
+}
+
+.project-info-title{
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.project-info-title p{
+    font-weight: 100;
 }
 
 .projects{
-  display: grid;
-  grid-template-columns: repeat(2, 400px);
-  justify-content: center;
-  align-content: center;
-  grid-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: calc(100vh - 20vh);
+    grid-gap: 1rem;
+    margin-top: 2rem;
+    min-width: 300px;
 }
 
-.project-1{
-  height: 350px;
+.project{
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.img-background img{
-  width: 100%;
-  cursor: pointer;
-  transition: all 1s;
+.img-container{
+    background-color: rgb(39, 39, 39);;
+    padding: 2rem;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
-.img-background img:hover{
-  transform: scale(1.4);
+.featured-projects-container img{
+    width: 90%;;
+    transition: all 0.3s ease;
 }
 
-.img-background{
-  background-color:  #111111;
-  height: 15rem;
-  width: inherit;
-  padding: 2rem;
-  overflow: hidden;
+.featured-projects-container img:hover{
+    transform: scale(1.1);
 }
 
-.project-1 h4{
-  margin-top: 1rem;
+.project h3{
+    font-size: 1.4rem;
 }
 
-.project-1 a{
-  margin-top: 0.5rem;
-  color:red;
+.project a{
+    font-size: 1rem;
 }
 
-.contact{
-  background-color: #111111;
-  height: 15rem;
-  margin: 0 auto 3rem auto;
-  padding: 4rem;
-  width: 70rem;
-  min-width: 350px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 1.5rem;
+/*----------------- Contact Us -----------------*/
+.contact-us{
+    padding-top: 2rem;
+    color: white;
 }
 
-.contact button{
-  width: 10rem;
-  height: 3rem;
-  font-size: 1rem;
+.contact-us-container{
+    max-width: 1000px;
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contact p{
-  padding-top: 1rem;
-  font-size: 1rem;
+.contact-us-contact{
+    background-color:rgb(39, 39, 39);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    flex-wrap: wrap;
 }
 
-.end-menu{
-  justify-content: center;
-  margin-bottom: 3rem;
+.contact-us-contact-info{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    min-width: 300px;
 }
 
+.contact-us-contact-info h1{
+    font-size: 3vw;
+    margin: 0 0 2rem 0;
+}
+
+.contact-us-contact-info p{
+    width: 100%;
+}
+
+.contact-us-anchor{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-us-nav{
+    width: 100%;
+    padding: 2rem;
+}
+
+.contact-us-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+.contact-us-nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+/*--------- Contact Us completed ---------*/
+
+/*--------- Footer Section ---------*/
 footer{
-  display: flex;
-  justify-content: center;
-  background-color: #111111;
-  padding: 2rem;
+    height: 10vh;
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    max-width: 1000px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
 }
 
 footer img{
-  height: 1rem;
-  margin-left: 3rem;
+    width: 20px;
 }
+/*--------- footer section completed -------*/
+
+
+
+/*---------- Media Queries --------*/
+
+@media (max-width: 800px){
+    header{
+        height: 10rem;
+        font-size: 0.8rem;
+        flex-direction: column;
+    }
+
+    .navbar{
+        padding: 1rem;
+    }
+
+    .navbar ul{
+        width: 100vw;
+        gap: 0.6rem;
+    }
+
+    .hero{
+        flex-direction: column;
+    }
+
+    .hero-img{
+        width: 100vw;
+    }
+
+    .hero-info{
+        width: 100%;
+        padding: 2rem;
+    }    
+
+    .projects{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-us-anchor, .contact-us-contact{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .contact-us-contact-info h1{
+        margin: 0 0 1rem 0;
+    }
+}
+
