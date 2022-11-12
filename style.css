@@ -97,7 +97,7 @@ header{
     display: block;
     margin-top: 1.5rem;
     background-color: red;
-    width: 140px;
+    width: 130px;
     padding: 1rem 1.5rem 1rem 1.5rem;
     color: white;
     text-decoration: none;
@@ -245,7 +245,7 @@ header{
 .projects{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    min-height: calc(100vh - 20vh);
+    min-height: calc(100% - 20%);
     grid-gap: 1rem;
     margin-top: 2rem;
     min-width: 300px;
