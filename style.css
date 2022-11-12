@@ -63,12 +63,14 @@ header{
 
 .hero-img{
     display: block;
+    min-width: 500px;
     width: 50%;
     object-fit: cover;
 }
 
 .hero-info{
     margin: auto 0 auto 0;
+    min-width: 500px;
     width:50%;
     display: flex;
     flex-direction: column;
@@ -92,9 +94,10 @@ header{
 }
 
 .anchor-me{
+    display: block;
     margin-top: 1.5rem;
     background-color: red;
-    width: 130px;
+    width: 140px;
     padding: 1rem 1.5rem 1rem 1.5rem;
     color: white;
     text-decoration: none;
@@ -216,7 +219,7 @@ header{
 .featured-projects-container{
     max-width: 1000px;
     width: 80%;
-    min-height: 90vh;
+    min-height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
