@@ -53,7 +53,7 @@ header{
 
 /*--------------------- Hero section --------------------- */
 .hero{
-    min-height: calc(100vh - 5rem);
+    /* min-height: calc(100vh - 5rem); */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -110,7 +110,7 @@ header{
 /*--------- overview -------- */
 .overview{
     background: linear-gradient(90deg,rgba(37, 37, 37, 0.709) 50%, rgba(0, 0, 0, 0.76) 50%);
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 3rem;
     display: flex;
     justify-content: center;
@@ -121,7 +121,7 @@ header{
 .overview-main{
     max-width: 1000px;
     width: 80%;
-    min-height: 80vh;
+    min-height: 80%;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
@@ -203,7 +203,7 @@ header{
 /*-------------- overview completed  ------------*/
 
 .featured-projects{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
