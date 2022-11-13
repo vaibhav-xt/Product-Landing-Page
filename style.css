@@ -63,14 +63,14 @@ header{
 
 .hero-img{
     display: block;
-    min-width: 500px;
+    min-width: 300px;
     width: 50%;
     object-fit: cover;
 }
 
 .hero-info{
     margin: auto 0 auto 0;
-    min-width: 500px;
+    min-width: 300px;
     width:50%;
     display: flex;
     flex-direction: column;
@@ -94,7 +94,7 @@ header{
 }
 
 .anchor-me{
-    display: block;
+    display: inline-block;
     margin-top: 1.5rem;
     background-color: red;
     width: 130px;
@@ -113,7 +113,6 @@ header{
 /*--------- overview -------- */
 .overview{
     background: linear-gradient(90deg,rgba(37, 37, 37, 0.709) 50%, rgba(0, 0, 0, 0.76) 50%);
-    /* min-height: 100vh; */
     padding: 3rem;
     display: flex;
     justify-content: center;
@@ -179,8 +178,7 @@ header{
 .box{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    text-align: center;
     background-color: rgb(39, 39, 39);
     padding: 2em;
 }
@@ -205,7 +203,6 @@ header{
 /*-------------- overview completed  ------------*/
 
 .featured-projects{
-    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -229,7 +226,7 @@ header{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 10vh;
+    min-height: 10%;
 }
 
 .project-info-title{
@@ -313,7 +310,7 @@ header{
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
-    min-width: 300px;
+    min-width: 200px;
 }
 
 .contact-us-contact-info h1{
@@ -388,7 +385,7 @@ footer img{
 
 @media (max-width: 800px){
     header{
-        height: 10rem;
+        height: auto;
         font-size: 0.8rem;
         flex-direction: column;
     }
@@ -398,7 +395,7 @@ footer img{
     }
 
     .navbar ul{
-        width: 100vw;
+        width: 100%;
         gap: 0.6rem;
     }
 
@@ -407,7 +404,7 @@ footer img{
     }
 
     .hero-img{
-        width: 100vw;
+        width: 100%;
     }
 
     .hero-info{
@@ -427,5 +424,59 @@ footer img{
     .contact-us-contact-info h1{
         margin: 0 0 1rem 0;
     }
+
+    .img-container{
+        padding: 1rem;
+    }
+
+    .contact-us-container{
+        height: auto;
+    }
+
+    .anchor-me{
+        width: auto;
+    }
+
 }
 
+
+@media (max-width: 500px) {
+    .navbar ul{
+        flex-direction: column;
+    }
+
+    .overview{
+        background: black;
+        padding: 0;
+    }
+
+    .overview-main{
+        width: 100%;
+    }    
+
+    .featured-projects{
+        padding: 0;
+    }
+
+    .project-info{
+        padding: 1rem;
+    }
+    
+    .featured-projects-container{
+        width: 100%;
+    }
+
+    .project{
+        margin: 0;
+        width: 100%;
+    }
+
+    .contact-us-container{
+        width: 100%;
+    }
+
+    .contact-us-nav{
+        padding: 1rem 0 1rem 0;
+    }
+
+}
